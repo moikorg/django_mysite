@@ -9,7 +9,9 @@ class SonnenBattery(models.Model):
     production = models.SmallIntegerField()
     rsoc = models.SmallIntegerField()
     timestamp = models.DateTimeField(db_index=True, )
-    ts = models.IntegerField()
     usoc = models.SmallIntegerField()
     uAC = models.PositiveSmallIntegerField()
     uBat = models.PositiveSmallIntegerField()
+
+    def __str__(self):
+        return 'TS: %s, Consumption %s' % (self.timestamp, self.consumption)

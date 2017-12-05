@@ -1,4 +1,7 @@
+from django.shortcuts import render
+
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("<h1>This is the sonnen battery report page</h1>")
+    #actualData =
+    return HttpResponse('<h1>Sonnen View homepage</h1>')
