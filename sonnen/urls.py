@@ -1,7 +1,11 @@
-from django.conf.urls import url
+from django.urls import path
+
 from . import views
 
 
 urlpatterns = [
-    url('^$', views.index, name='index'),
+    path('', views.index, name='index'),
+    path('<int:sonnen_id>/', views.detail, name='detail'),
+
+#    url(''),
 ]
