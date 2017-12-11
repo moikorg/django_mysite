@@ -1,19 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import SonnenBattery
-from django.http import Http404
 
 from django.http import HttpResponse
 
 def index(request):
-#    all_sonnenData = SonnenBattery.objects.last()
     all_sonnenData = SonnenBattery.objects.all()
     return render(request, 'sonnen/index.html', {'all_sonnen': all_sonnenData})
 
 def detail(request, sonnen_id):
-    try:
-        sonnenData = SonnenBattery.objects.get(id=sonnen_id)
-        ts = str(sonnenData.timestamp)
-    except SonnenBattery.DoesNotExist:
-        raise Http404("Sonnen detail does not exist")
-#    return HttpResponse('<h2>Details for Sonnen data set ' + str(sonnen_id) + ' </h2>ts: ' + ts + '</h2>')
+    sonnenData = get_object_or_404(SonnenBattery, id=sonnen_id, )
     return render(request, 'sonnen/detail.html', {'all_sonnen': sonnenData})
