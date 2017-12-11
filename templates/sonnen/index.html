@@ -4,5 +4,6 @@
 <ul>
     {% for sonnen in all_sonnen %}
         <li><a href="/sonnen/{{ sonnen.id }}/">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
+        <li><a href="{% url 'detail' sonnen.id %}">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
     {% endfor %}
 </ul>
