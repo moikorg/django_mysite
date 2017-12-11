@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<ul>
+    {% for sonnen in all_sonnen %}
+        <li><a href="/sonnen/{{ sonnen.id }}/">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
+        <li><a href="{% url 'detail' sonnen.id %}">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
+    {% endfor %}
+</ul>
