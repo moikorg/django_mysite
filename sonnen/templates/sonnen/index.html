@@ -1,0 +1,19 @@
+<!-- loads the path to your static file -->
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'sonnen/style.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{% url 'sonnen:index' %}">Sonnen Battery</a>
+        </div>
+    </div>
+</nav>
+
+<ul>
+    {% for sonnen in all_sonnen %}
+        <li><a href="{% url 'sonnen:detail' sonnen.id %}">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
+    {% endfor %}
+</ul>
