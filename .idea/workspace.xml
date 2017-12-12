@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f1e02b6-260b-4ec5-a908-8c8a065d480e" name="Default" comment="added 404 for Detail page&#10;removed static URL path">
-      <change beforePath="" afterPath="$PROJECT_DIR$/sonnen/templates/sonnen/status.html" />
+    <list default="true" id="5f1e02b6-260b-4ec5-a908-8c8a065d480e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sonnen/templates/sonnen/base.html" afterPath="$PROJECT_DIR$/sonnen/templates/sonnen/base.html" />
-      <change beforePath="$PROJECT_DIR$/sonnen/urls.py" afterPath="$PROJECT_DIR$/sonnen/urls.py" />
-      <change beforePath="$PROJECT_DIR$/sonnen/views.py" afterPath="$PROJECT_DIR$/sonnen/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -267,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513098676730</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added 404 for Detail page&#10;removed static URL path">
+      <created>1513113083476</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1513113083476</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
