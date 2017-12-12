@@ -55,7 +55,7 @@ ROOT_URLCONF = 'moikorg_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'sonnen/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
