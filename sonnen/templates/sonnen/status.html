@@ -1,0 +1,28 @@
+{% extends 'sonnen/base.html' %}
+{% block title %}Sonnen battery Status{% endblock %}
+{% block body %}
+
+    <script>
+      anychart.onDocumentLoad(function () {
+        // create an instance of a pie chart
+        var chart = anychart.pie();
+        // set the data
+        chart.data([
+          ["Production", {{ production }}],
+          ["Consumption", {{ consumption }}],
+          ["GridConsumption", {{ gridConsumption }}]
+        ]);
+        // set chart title
+        chart.title("Top 5 pancake fillings");
+        // set the container element
+        chart.container("graphic-container");
+        // initiate chart display
+        chart.draw();
+      });
+    </script>
+
+        <!-- this draws the graphic -->
+    <div id="graphic-container" style="width: 500px; height: 400px;"></div>
+
+
+{% endblock %}
