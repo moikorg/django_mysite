@@ -14,10 +14,10 @@ from django.views import generic
 class DetailView(generic.DetailView):
     model = SonnenBattery
     template_name = 'sonnen/detail.html'
+    context_object_name = 'all_sonnen'
 
 class IndexView(generic.ListView):
     template_name = 'sonnen/index.html'
-    context_object_name = 'all_sonnen'
 
     def get_queryset(self):
         return SonnenBattery.objects.all()
