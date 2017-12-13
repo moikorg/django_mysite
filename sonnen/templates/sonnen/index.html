@@ -31,7 +31,7 @@
 
     <h3>Here the details for the Sonnen Battery</h3>
     <ul>
-        {% for sonnen in all_sonnen %}
+        {% for sonnen in object_list %}
             <li><a href="{% url 'sonnen:detail' sonnen.id %}">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
         {% endfor %}
     </ul>
