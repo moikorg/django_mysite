@@ -18,6 +18,10 @@ class DetailView(generic.DetailView):
 
 class IndexView(generic.ListView):
     template_name = 'sonnen/index.html'
+    model = SonnenBattery
+    context_object_name = 'all_sonnen'
+    paginate_by = 50
+
 
     def get_queryset(self):
         return SonnenBattery.objects.all()
