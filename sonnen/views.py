@@ -17,11 +17,11 @@ class DetailView(generic.DetailView):
     context_object_name = 'all_sonnen'
 
 class IndexView(generic.ListView):
-    template_name = 'sonnen/index.html'
     model = SonnenBattery
+    template_name = 'sonnen/index.html'
     context_object_name = 'all_sonnen'
     paginate_by = 50
-
+    queryset = SonnenBattery.objects.order_by('-created')
 
     def get_queryset(self):
         return SonnenBattery.objects.all()
