@@ -21,7 +21,7 @@ class IndexView(generic.ListView):
     template_name = 'sonnen/index.html'
     context_object_name = 'all_sonnen'
     paginate_by = 50
-    queryset = SonnenBattery.objects.order_by('-created')
+    queryset = SonnenBattery.objects.order_by('-timestamp')
 
     def get_queryset(self):
         return SonnenBattery.objects.all()
