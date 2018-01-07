@@ -13,7 +13,7 @@
           ["GridConsumption", {{ gridConsumption }}]
         ]);
         // set chart title
-        chart.title("Top 5 pancake fillings");
+        chart.title("Status from {{ timestamp }}");
         // set the container element
         chart.container("graphic-container");
         // initiate chart display
@@ -26,8 +26,11 @@
 
     <div class="jumbotron ">
         <div class="container">
-            <h1 class="display-2">Production: {{ production }} [W]</h1>
-            <h1 class="display-3">Consumption: {{ gridConsumption }} [W]</h1>
+            <h1 class="display-3">PAC Production: {{ production }} [W]</h1>
+            <h1 class="display-4">Home Consumption: {{ consumption }} [W]</h1>
+            <h1 class="display-4">Grid Consumption: {{ gridConsumption }} [W]</h1>
+            <h1 class="display-4">PAC Consumption: {{ pacTotal }} [W]</h1>
+            <h1 class="display-4">Battery Voltage: {{ uBat }} [V]</h1>
 
         </div>
     </div>

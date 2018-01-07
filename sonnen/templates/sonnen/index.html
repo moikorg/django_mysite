@@ -18,7 +18,7 @@
         // set chart title
         chart.title("Top 5 pancake fillings");
         // set the container element
-        chart.container("graphic-container");
+        chart.container("test-graphic-container");
         // initiate chart display
         chart.draw();
       });
@@ -26,13 +26,18 @@
 
 
     <!-- this draws the graphic -->
-    <div id="graphic-container" style="width: 500px; height: 400px;"></div>
+{#    <div id="test-graphic-container" style="width: 500px; height: 400px;"></div>#}
 
 
     <h3>Here the details for the Sonnen Battery</h3>
     <ul>
         {% for sonnen in all_sonnen %}
-            <li><a href="{% url 'sonnen:detail' sonnen.id %}">{{ sonnen.timestamp }} consumption: {{ sonnen.consumption }}, production: {{ sonnen.production }}</a> </li>
+            <li><a href="{% url 'sonnen:detail' sonnen.id %}">{{ sonnen.timestamp }}
+                Home cons: {{ sonnen.consumption }},
+                PAC prod: {{ sonnen.production }},
+                Grid cons: {{ sonnen.gridConsumption }},
+                PAC cons: {{ sonnen.pacTotal }}
+                </a> </li>
         {% endfor %}
     </ul>
 

@@ -20,8 +20,8 @@ class IndexView(generic.ListView):
     model = SonnenBattery
     template_name = 'sonnen/index.html'
     context_object_name = 'all_sonnen'
-    paginate_by = 50
-    queryset = SonnenBattery.objects.order_by('-timestamp')
+    paginate_by = 200
+    queryset = SonnenBattery.objects.order_by('-pk')
 
     def get_queryset(self):
         return SonnenBattery.objects.all()
@@ -33,6 +33,7 @@ def status(request):
     context = {'timestamp': qs.timestamp,
                'consumption': qs.consumption,
                'production': qs.production,
+               'pacTotal': qs.pacTotal,
                'gridConsumption': qs.gridConsumption,
-               }
+               'uBat': qs.uBat,}
     return render(request, 'sonnen/status.html', context)
