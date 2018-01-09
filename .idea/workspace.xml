@@ -4,7 +4,6 @@
     <list default="true" id="5f1e02b6-260b-4ec5-a908-8c8a065d480e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/sonnen/templates/sonnen/status.html" afterPath="$PROJECT_DIR$/sonnen/templates/sonnen/status.html" />
-      <change beforePath="$PROJECT_DIR$/sonnen/views.py" afterPath="$PROJECT_DIR$/sonnen/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,28 +60,8 @@
       <file leaf-file-name="status.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sonnen/templates/sonnen/status.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="89" lean-forward="false" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sonnen/templates/sonnen/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sonnen/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="82" lean-forward="false" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+            <state relative-caret-position="196">
+              <caret line="32" column="93" lean-forward="false" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -433,7 +412,14 @@
       <option name="project" value="LOCAL" />
       <updated>1515501928704</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="usoc added to the staus view">
+      <created>1515502161820</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1515502161820</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -447,10 +433,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.5048611" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905984" sideWeight="0.496337" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32905984" sideWeight="0.496337" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32965517" sideWeight="0.49513888" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -539,7 +526,8 @@
     <MESSAGE value="dockerization" />
     <MESSAGE value="* ordering of the details entries&#10;* slight changes to the view to show additional data&#10;*" />
     <MESSAGE value="Description correction on the status view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Description correction on the status view" />
+    <MESSAGE value="usoc added to the staus view" />
+    <option name="LAST_COMMIT_MESSAGE" value="usoc added to the staus view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -838,8 +826,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sonnen/templates/sonnen/status.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="89" lean-forward="false" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
+        <state relative-caret-position="196">
+          <caret line="32" column="93" lean-forward="false" selection-start-line="32" selection-start-column="93" selection-end-line="32" selection-end-column="93" />
           <folding />
         </state>
       </provider>
