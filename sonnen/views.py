@@ -35,5 +35,6 @@ def status(request):
                'production': qs.production,
                'pacTotal': qs.pacTotal,
                'gridConsumption': qs.gridConsumption,
-               'uBat': qs.uBat,}
+               'uBat': qs.uBat,
+               'usoc': qs.usoc,}
     return render(request, 'sonnen/status.html', context)
