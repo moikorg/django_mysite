@@ -37,7 +37,7 @@
              {% if pacTotal >= 0 %}
                 <h1 class="display-4"><span class="font_style_green">Consumption from battery: {{ pacTotal }} [W]</span></h1>
             {% else %}
-                <h1 class="display-4"><span class="font_style_red">Battery charging: {{ pacTotal }} [W]</span></h1>
+                <h1 class="display-4"><span class="font_style_red">Battery charging: {{ pacTotal|cut:"-" }} [W]</span></h1>
             {% endif %}
             <h1 class="display-4">Battery Voltage: {{ uBat }} [V]</h1>
             <h1 class="display-4">Battery charge level: {{ usoc }}%</h1>
