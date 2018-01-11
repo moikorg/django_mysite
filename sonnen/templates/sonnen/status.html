@@ -29,10 +29,10 @@
             <h1 class="display-4">Status from {{ timestamp }}</h1>
             <h1 class="display-3">PV Production: {{ production }} [W]</h1>
             <h1 class="display-4">Home Consumption: {{ consumption }} [W]</h1>
-            {% if gridconsumption < 0 %}
-                <h1 class="display-4">Grid Feed-in: {{ gridConsumption }} [W]</h1>
+            {% if gridConsumption >= 0 %}
+                <h1 class="display-4"><font color="green">Grid Feed-in: {{ gridConsumption }} [W]</font></h1>
             {% else %}
-                <h1 class="display-4">Grid Consumption: {{ gridConsumption }} [W]</h1>
+                <h1 class="display-4"><font color="red">Grid Consumption: {{ gridConsumption|cut:"-" }} [W]</font></h1>
             {% endif %}
              {% if pacTotal < 0 %}
                 <h1 class="display-4">Consumption from battery: {{ pacTotal }} [W]</h1>

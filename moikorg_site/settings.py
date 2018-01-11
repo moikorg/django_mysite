@@ -25,7 +25,7 @@ SECRET_KEY = '3@5u7d-3inab)8u^xsx+ukgwezprt!(&^i5l-(=podf%##hy!u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'docker']
+ALLOWED_HOSTS = ['localhost', 'docker', 'pv', 'pv.moik.org']
 
 
 # Application definition

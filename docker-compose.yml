@@ -1,5 +1,9 @@
 version: "2"
 
+networks:
+  macs_service_net:
+    external: true
+
 services:
   django-site:
     build: .
@@ -8,7 +12,14 @@ services:
     command: python3 manage.py runserver 0.0.0.0:8001
     ports:
       - "8001:8001"
+    expose:
+      - "8001"
     volumes:
       - .:/code
     restart: always
-#network_mode: "host"
+    environment:
+      - VIRTUAL_HOST=pv.moik.org
+      - VIRTUAL_NETWORK=macs_service_net
+      - VIRTUAL_PORT=8001
+    networks:
+      - macs_service_net
