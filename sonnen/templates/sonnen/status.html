@@ -26,11 +26,21 @@
 
     <div class="jumbotron ">
         <div class="container">
+            <h1 class="display-4">Status from {{ timestamp }}</h1>
             <h1 class="display-3">PV Production: {{ production }} [W]</h1>
             <h1 class="display-4">Home Consumption: {{ consumption }} [W]</h1>
-            <h1 class="display-4">Grid Consumption: {{ gridConsumption }} [W]</h1>
-            <h1 class="display-4">Battery Consumption: {{ pacTotal }} [W]</h1>
-            <h1 class="display-4">Battery Voltage: {{ uBat }} [V] - Charge level: {{ usoc }}%</h1>
+            {% if gridconsumption < 0 %}
+                <h1 class="display-4">Grid Feed-in: {{ gridConsumption }} [W]</h1>
+            {% else %}
+                <h1 class="display-4">Grid Consumption: {{ gridConsumption }} [W]</h1>
+            {% endif %}
+             {% if pacTotal < 0 %}
+                <h1 class="display-4">Consumption from battery: {{ pacTotal }} [W]</h1>
+            {% else %}
+                <h1 class="display-4">Battery charging: {{ pacTotal }} [W]</h1>
+            {% endif %}
+            <h1 class="display-4">Battery Voltage: {{ uBat }} [V]</h1>
+            <h1 class="display-4">Battery charge level: {{ usoc }}%</h1>
 
         </div>
     </div>
