@@ -32,7 +32,7 @@
             {% if gridConsumption >= 0 %}
                 <h2 class="display-4"><span class="text-success">Grid Feed-in: {{ gridConsumption }} [W]</span></h2>
             {% else %}
-                <h2 class="display-4"><span class=text-danger">Grid Consumption: {{ gridConsumption|cut:"-" }} [W]</span></h2>
+                <h2 class="display-4"><span class="text-danger">Grid Consumption: {{ gridConsumption|cut:"-" }} [W]</span></h2>
             {% endif %}
              {% if pacTotal >= 0 %}
                 <h2 class="display-4"><span class="text-success">Consumption from battery: {{ pacTotal }} [W]</span></h2>
