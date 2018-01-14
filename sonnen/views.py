@@ -33,11 +33,11 @@ def status(request):
     discharging = False
     charging = False
     holding = False
-    if (qs.pacTotal > 0)
+    if qs.pacTotal > 0:
         discharging = True
-    if (qs.production > qs.consumption)
+    if qs.production > qs.consumption:
         charging = True
-    else
+    else:
         holding = True
     context = {'timestamp': qs.timestamp,
                'consumption': qs.consumption,
