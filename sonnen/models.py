@@ -3,8 +3,14 @@ from django.db import models
 class SonnenBattery(models.Model):
     consumption = models.SmallIntegerField()
     frequency = models.PositiveSmallIntegerField()
+    # gridConsumption:
+    #   negativ value = energy consumption from grid
+    #   positiv value = energy feed-in to the grid
     gridConsumption = models.SmallIntegerField()
     isSystemInstalled = models.BooleanField()
+    # pacTotal:
+    #   negativ value = battery is charging
+    #   postitv value = battery is discharging
     pacTotal = models.SmallIntegerField()
     production = models.SmallIntegerField()
     rsoc = models.SmallIntegerField()   # remain state of charge
