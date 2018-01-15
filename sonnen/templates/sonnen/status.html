@@ -24,27 +24,27 @@
 
 
 
-    <div class="jumbotron ">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h2 class="display-4">Status from {{ timestamp }}</h2>
-            <h2 class="display-3">PV Production: {{ production }}W</h2>
-            <h2 class="display-4">Home Consumption: {{ consumption }}W</h2>
+            <p class="lead"">Status from {{ timestamp }}</p>
+            <h1 class="display-3">PV Production: {{ production }}W</h1>
+            <p class="display-4">Home Consumption: {{ consumption }}W</p>
             {% if gridConsumption >= 0 %}
-                <h2 class="display-4"><span class="text-success">Grid Feed-in: {{ gridConsumption }}W</span></h2>
+                <p class="display-4"><span class="text-success">Grid Feed-in: {{ gridConsumption }}W</span></p>
             {% else %}
-                <h2 class="display-4"><span class="text-danger">Grid Consumption: {{ gridConsumption|cut:"-" }}W</span></h2>
+                <p class="display-4"><span class="text-danger">Grid Consumption: {{ gridConsumption|cut:"-" }}W</span></p>
             {% endif %}
             {% if charging %}
-                <h2 class="display-4"><span class="text-success">Battery charging: {{ pacTotal|cut:"-" }}W</span></h2>
+                <p class="display-4"><span class="text-success">Battery charging: {{ pacTotal|cut:"-" }}W</span></p>
             {% elif discharging %}
-                <h2 class="display-4"><span class="text-success">Consumption from battery: {{ pacTotal }}W</span></h2>
+                <p class="display-4"><span class="text-success">Consumption from battery: {{ pacTotal }}W</span></p>
             {% elif holding%}
-                <h2 class="display-4"><span class="text-danger">Battery holding: {{ pacTotal|cut:"-" }}W</span></h2>
+                <p class="display-4"><span class="text-danger">Battery holding: {{ pacTotal|cut:"-" }}W</span></p>
             {% else %}
-                <h2 class="display-4">Battery charging: {{ pacTotal|cut:"-" }} W</span></h2>
+                <p class="display-4">Battery charging: {{ pacTotal|cut:"-" }} W</span></p>
             {% endif %}
-            <h2 class="display-4">Battery Voltage: {{ uBat }}V</h2>
-            <h2 class="display-4">Battery charge level: {{ usoc }}%</h2>
+            <p class="lead">Battery Voltage: {{ uBat }}V</p>
+            <p class="lead">Battery charge level: {{ usoc }}%</p>
 
         </div>
     </div>
