@@ -1,6 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+import django.shortcuts
 from .models import SonnenBattery
-from django.http import HttpResponse
 from django.views import generic
 
 # def index(request):
@@ -11,10 +10,12 @@ from django.views import generic
 #     sonnenData = get_object_or_404(SonnenBattery, id=sonnen_id, )
 #     return render(request, 'sonnen/detail.html', {'all_sonnen': sonnenData})
 
+
 class DetailView(generic.DetailView):
     model = SonnenBattery
     template_name = 'sonnen/detail.html'
     context_object_name = 'all_sonnen'
+
 
 class IndexView(generic.ListView):
     model = SonnenBattery
@@ -25,6 +26,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return SonnenBattery.objects.all()
+
 
 def status(request):
     qs = SonnenBattery.objects.latest('timestamp')
@@ -44,10 +46,11 @@ def status(request):
                'production': qs.production,
                'pacTotal': qs.pacTotal,
                'gridConsumption': qs.gridConsumption,
+               'gridConsumptionAbsolut': abs(qs.gridConsumption),
                'uBat': qs.uBat,
                'usoc': qs.usoc,
                'discharging': discharging,
                'charging': charging,
                'holding': holding,
                }
-    return render(request, 'sonnen/status.html', context)
+    return django.shortcuts.render(request, 'sonnen/status.html', context)

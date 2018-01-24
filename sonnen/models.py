@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class SonnenBattery(models.Model):
     consumption = models.SmallIntegerField()
     frequency = models.PositiveSmallIntegerField()
