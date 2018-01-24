@@ -8,9 +8,11 @@
         var chart = anychart.pie();
         // set the data
         chart.data([
-          ["Production", {{ production }}],
-          ["Consumption", {{ consumption }}],
-          ["GridConsumption", {{ gridConsumption }}]
+            {name: "PV production", value: {{ production }}, fill: 'yellow'},
+          {% if discharging %}
+              {name: "Battery discharging", value: {{ pacTotal }}, fill: 'green'},
+          {% endif %}
+            {name: "Grid consumption", value: {{ gridConsumptionAbsolut }}, fill: 'red'}
         ]);
         // set chart title
         chart.title("Status from {{ timestamp }}");
