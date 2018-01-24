@@ -26,7 +26,7 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <p class="lead"">Status from {{ timestamp }}</p>
+            <p class="lead">Status from {{ timestamp }}</p>
             <h1 class="display-3">PV Production: {{ production }}W</h1>
             <p class="display-4">Home Consumption: {{ consumption }}W</p>
             {% if gridConsumption >= 0 %}
@@ -41,7 +41,7 @@
             {% elif holding%}
                 <p class="display-4"><span class="text-danger">Battery holding: {{ pacTotal|cut:"-" }}W</span></p>
             {% else %}
-                <p class="display-4">Battery charging: {{ pacTotal|cut:"-" }} W</span></p>
+                <p class="display-4">Battery charging: {{ pacTotal|cut:"-" }} W</p>
             {% endif %}
             <p class="lead">Battery Voltage: {{ uBat }}V</p>
             <p class="display-4">Battery charge level: {{ usoc }}%</p>
