@@ -17,7 +17,7 @@
             {% endif %}
         ]);
         // set chart title
-        chart.title("Status from {{ timestamp }}");
+        chart.title("Production: {{ timestamp }}");
         // set the container element
         chart.container("graphic-container-production");
         // initiate chart display
@@ -36,7 +36,7 @@
                 {name: "Battery charging", value: {{ pacTotal }}, fill: 'green'},
             {% endif %}]);
         // set chart title
-        chart.title("Status from {{ timestamp }}");
+        chart.title("Consumption: {{ timestamp }}");
         // set the container element
         chart.container("graphic-container-consumption");
         // initiate chart display
