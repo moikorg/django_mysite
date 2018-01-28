@@ -31,7 +31,7 @@
         var chart = anychart.pie();
         // set the data
         chart.data([
-            {name: "Home consumption", value: {{ production }}, fill: 'red'},
+            {name: "Home consumption", value: {{ consumption }}, fill: 'red'},
             {% if charging %}
                 {name: "Battery charging", value: {{ pacTotal }}, fill: 'green'},
             {% endif %}]);
