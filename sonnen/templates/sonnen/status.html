@@ -9,15 +9,36 @@
         // set the data
         chart.data([
             {name: "PV production", value: {{ production }}, fill: 'yellow'},
-          {% if discharging %}
-              {name: "Battery discharging", value: {{ pacTotal }}, fill: 'green'},
-          {% endif %}
-            {name: "Grid consumption", value: {{ gridConsumptionAbsolut }}, fill: 'red'}
+            {% if discharging %}
+                {name: "Battery discharging", value: {{ pacTotal }}, fill: 'green'},
+            {% endif %}
+            {% if gridConsumption < 0 %}
+                {name: "Grid consumption", value: {{ gridConsumptionAbsolut }}, fill: 'red'}
+            {% endif %}
         ]);
         // set chart title
         chart.title("Status from {{ timestamp }}");
         // set the container element
-        chart.container("graphic-container");
+        chart.container("graphic-container-production");
+        // initiate chart display
+        chart.draw();
+      });
+    </script>
+
+        <script>
+      anychart.onDocumentLoad(function () {
+        // create an instance of a pie chart
+        var chart = anychart.pie();
+        // set the data
+        chart.data([
+            {name: "Home consumption", value: {{ production }}, fill: 'red'},
+            {% if charging %}
+                {name: "Battery charging", value: {{ pacTotal }}, fill: 'green'},
+            {% endif %}]);
+        // set chart title
+        chart.title("Status from {{ timestamp }}");
+        // set the container element
+        chart.container("graphic-container-consumption");
         // initiate chart display
         chart.draw();
       });
@@ -52,7 +73,17 @@
     </div>
 
         <!-- this draws the graphic -->
-    <div id="graphic-container" style="width: 500px; height: 400px;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div id="graphic-container-production" style="width: 500px; height: 400px;"></div>
+            </div>
+            <div>
+                <div id="graphic-container-consumption" style="width: 500px; height: 400px;"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 {% endblock %}

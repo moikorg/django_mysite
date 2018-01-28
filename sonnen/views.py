@@ -1,6 +1,7 @@
 import django.shortcuts
 from .models import SonnenBattery
 from django.views import generic
+import datetime
 
 # def index(request):
 #     all_sonnenData = SonnenBattery.objects.all()
@@ -30,8 +31,8 @@ class IndexView(generic.ListView):
 
 def status(request):
     qs = SonnenBattery.objects.latest('timestamp')
-#    qs = SonnenBattery.objects.all()
-#    qs_json = serializers.serialize('json', qs)
+#    qs = SonnenBattery.objects.filter(timestamp__lt=datetime.date(2018, 1, 25)).latest('timestamp')
+
     discharging = False
     charging = False
     holding = False
