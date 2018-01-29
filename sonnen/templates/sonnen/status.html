@@ -35,7 +35,7 @@
             {% if charging %}
                 {name: "Battery charging", value: {{ pacTotalAbsolut }}, fill: 'green'},
             {% endif %}]);
-
+          {% if charging %}
                 {name: "Battery charging", value: {{ pacTotal }}, fill: 'green'},
             {% endif %}
 	    {% if gridConsumption > 0 %}
