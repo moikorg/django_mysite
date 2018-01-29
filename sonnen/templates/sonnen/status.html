@@ -36,6 +36,12 @@
                 {name: "Battery charging", value: {{ pacTotalAbsolut }}, fill: 'green'},
             {% endif %}]);
 
+                {name: "Battery charging", value: {{ pacTotal }}, fill: 'green'},
+            {% endif %}
+	    {% if gridConsumption > 0 %}
+		{name: "Grid feed-in", value: {{ gridConsumption }}, fill: 'blue'},
+	    {% endif %}
+	    ]);
         // set chart title
         chart.title("Consumption: {{ timestamp }}");
         // set the container element
