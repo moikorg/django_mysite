@@ -33,8 +33,9 @@
         chart.data([
             {name: "Home consumption", value: {{ consumption }}, fill: 'red'},
             {% if charging %}
-                {name: "Battery charging", value: {{ pacTotal }}, fill: 'green'},
+                {name: "Battery charging", value: {{ pacTotalAbsolut }}, fill: 'green'},
             {% endif %}]);
+
         // set chart title
         chart.title("Consumption: {{ timestamp }}");
         // set the container element
@@ -55,14 +56,14 @@
             {% if gridConsumption >= 0 %}
                 <p class="display-4"><span class="text-success">Grid Feed-in: {{ gridConsumption }}W</span></p>
             {% else %}
-                <p class="display-4"><span class="text-danger">Grid Consumption: {{ gridConsumption|cut:"-" }}W</span></p>
+                <p class="display-4"><span class="text-danger">Grid Consumption: {{ gridConsumptionAbsolut }}W</span></p>
             {% endif %}
             {% if charging %}
-                <p class="display-4"><span class="text-success">Battery charging: {{ pacTotal|cut:"-" }}W</span></p>
+                <p class="display-4"><span class="text-success">Battery charging: {{ pacTotalAbsolut }}W</span></p>
             {% elif discharging %}
                 <p class="display-4"><span class="text-success">Consumption from battery: {{ pacTotal }}W</span></p>
             {% elif holding%}
-                <p class="display-4"><span class="text-danger">Battery holding: {{ pacTotal|cut:"-" }}W</span></p>
+                <p class="display-4"><span class="text-danger">Battery holding: {{ pacTotalAbsolut }}W</span></p>
             {% else %}
                 <p class="display-4">Battery charging: {{ pacTotal|cut:"-" }} W</p>
             {% endif %}

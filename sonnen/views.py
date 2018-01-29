@@ -46,6 +46,7 @@ def status(request):
                'consumption': qs.consumption,
                'production': qs.production,
                'pacTotal': qs.pacTotal,
+               'pacTotalAbsolut': abs(qs.pacTotal),
                'gridConsumption': qs.gridConsumption,
                'gridConsumptionAbsolut': abs(qs.gridConsumption),
                'uBat': qs.uBat,
