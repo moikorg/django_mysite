@@ -101,9 +101,10 @@ ENV/
 # mypy
 .mypy_cache/
 
-# the sqlite DB
+# the (sqlite) DB
 sonnen.sql
 db.sqlite3
+my.cnf
 
 # IDE
 .idea/
