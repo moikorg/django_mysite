@@ -1,5 +1,5 @@
 """
-WSGI config for moikorg_site project.
+WSGI config for pv project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "moikorg_site.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pv.settings")
 
 application = get_wsgi_application()
