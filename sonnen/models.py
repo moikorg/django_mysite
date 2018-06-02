@@ -3,7 +3,7 @@ from django.db import models
 
 class SonnenBattery(models.Model):
     consumption = models.SmallIntegerField()
-    frequency = models.PositiveSmallIntegerField()
+    #frequency = models.PositiveSmallIntegerField()
     # gridConsumption:
     #   negativ value = energy consumption from grid
     #   positiv value = energy feed-in to the grid
