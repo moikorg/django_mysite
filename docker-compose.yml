@@ -21,5 +21,7 @@ services:
       - VIRTUAL_HOST=pv.moik.org
       - VIRTUAL_NETWORK=macs_service_net
       - VIRTUAL_PORT=8001
+      - LETSENCRYPT_HOST=pv.moik.org
+      - LETSENCRYPT_EMAIL=mike@moik.org
     networks:
       - macs_service_net
