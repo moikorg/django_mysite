@@ -8,7 +8,7 @@ class SonnenBattery(models.Model):
     #   negativ value = energy consumption from grid
     #   positiv value = energy feed-in to the grid
     gridConsumption = models.SmallIntegerField()
-    isSystemInstalled = models.NullBooleanField(blank=True, null=True)
+    # isSystemInstalled = models.NullBooleanField(blank=True, null=True)
     # pacTotal:
     #   negativ value = battery is charging
     #   postitv value = battery is discharging
